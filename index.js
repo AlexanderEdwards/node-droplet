@@ -3,11 +3,11 @@ var app = express()
 var fs = require('fs');
 
 app.get('/', function (req, res) {
-  res.send('App works.');
+  res.send('Build script worked.');
 })
 
 app.get('/endpoint', (req,res)=>{
-  res.send('this is an endpoint');
+  res.send('bu');
   adfafasds();
   throw new Error("this is an error");
 })
