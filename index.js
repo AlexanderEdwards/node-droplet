@@ -13,7 +13,8 @@ app.get('/', function (req, res) {
 
 //shredwards.live/endpoint
 app.get('/endpoint', (req,res)=>{
-  res.sendFile(path.join(__dirname, './test-app/dist/test-app/index.html'));
+  
+  res.sendFile( __dirname + '/test-app/dist/test-app/index.html');
 })
 
 app.get('/crash', function (req, res) {
