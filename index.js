@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 
 //Point to root of build directory 
-app.use(__dirname + './test-app/dist/test-app');
+app.use(express.static(path.join(__dirname, './test-app/dist/test-app')));
 
 //shredwards.live
 app.get('/', function (req, res) {
@@ -13,8 +13,6 @@ app.get('/', function (req, res) {
 
 //shredwards.live/endpoint
 app.get('/endpoint', (req,res)=>{
-  
-  res.sendFile( __dirname + '/test-app/dist/test-app/index.html');
 })
 
 app.get('/crash', function (req, res) {
