@@ -2,14 +2,16 @@ var express = require('express')
 var app = express()
 var fs = require('fs');
 
+//shredwards.live
 app.get('/', function (req, res) {
-  res.send('Build script worked.');
+  res.send('I have made a change.');
 })
 
+//shredwards.live/endpoint
 app.get('/endpoint', (req,res)=>{
   res.send('bu');
   adfafasds();
-  throw new Error("this is an error");
+  throw new Error("this is an ");
 })
 
 app.get('/crash', function (req, res) {
