@@ -7,8 +7,10 @@ app.get('/', function (req, res) {
 
 app.get('/endpoint', (req,res)=>{
   res.send('this is an endpoint');
+  throw new Error("this is an error");
 })
 
 app.listen(4000, function () {
   console.log('Magic is happening on port 3000!')
+  
 })
