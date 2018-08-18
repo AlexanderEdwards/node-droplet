@@ -13,10 +13,7 @@ app.get('/endpoint', (req,res)=>{
 })
 
 app.get('/crash', function (req, res) {
-  fs.readFile('somefile.txt', function (err, data) {
-    if (err) throw err;
-    console.log(data);
-  });
+  res.send('All good');
 })
 
 app.listen(4000, function () {
